@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Each index contains a the representation of a number (0-9)
+# Each index contains a representation of a number (0-9)
 digits = [
         "###\n# #\n# #\n# #\n###",
         "  #\n  #\n  #\n  #\n  #",
