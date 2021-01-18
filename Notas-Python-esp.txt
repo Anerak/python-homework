@@ -1,0 +1,1058 @@
+So...Here we are again, on a new course...
+
+Lista de instrucciones = IL (Instruction List)
+
+
+Compile = convertir a lenguaje de máquina, no hace falta un compilador, ya enviamos los archivos binarios.
+
+Interpret = editar código en cualquier momento, hace falta un intérprete.
+
+
+Código -> Intérprete -> Ejecutar
+
+Facil de:
+-> aprender
+-> enseñar
+-> usar
+-> entender
+-> obtener, instalar and poner en producción
+
+Python 3 es como un nuevo lenguaje, comparado a Python 2.
+
+El Python de la PSF (Python Software Foundation) es el oficial, conocido como CPython.
+Otras versiones:
+- Cython: convierte el código a C.
+- Jython: se conecta mejor a Java, Python2 compatible.
+- PyPy/RPython: Limitado a Python, Python escrito en un Python similar. Útil para probar nuevas features, Python3 compatible.
+
+print("print para mostrar mensajes en pantalla")
+
+
+Las Funciones usan ()
+
+functionName(argumentos)
+
+Algunas funciónes tienen argumentos clave. Esos van después de los argumentos posicionales. clave="valor"
+
+Solo una instrucción por línea.
+
+Usando print() se imprime una línea vacía.
+
+Usando \slash\ podemos escapar caracteres, como \n (nueva línea).
+
+También acepta multiples argumentos, separados por una coma. Automáticamente separada los argumentos con un espacio.
+Argumentos predeterminados:
+- end=" " termina con un espacio, el próximo print() será en la misma línea. Si termina con "", hará lo mismo, ya que el próximo print() será como otro argumento.
+-sep="-" usa guión para separar argumentos.
+
+Enteros	(int)
+12 345 678
+Un guión/menos adelante indica que es negativo.
+
+Octales & Hexadecimales
+Números precedidos por 0O / 0o estan definidos como octales, eso significa que el número debe contener digitos entre el 0 y el 7.
+Números precedidos por 0x / 0X son hexadecimales.
+
+Números flotantes (float)
+Solo se usa el punto . no la coma ,
+0.4 puede escribirse como .4
+
+Podemos usar e/E como exponente
+3E8 -> 3 * 10⁸
+
+Codificando flotantes
+Constante de Planck = 6.62607 * 10⁻³⁴ ----> 6.626007E-34
+
+Python siempre usa la representación más corta
+0.0000000000000000000001 ----> 1e-22
+
+Cadenas de texto (String)
+Si queremos usar "comillas" dentro de una cadena de texto.
+Yeah, usemos las barras diagonales \escape\ o rodeemos con 'comillas simples'.
+.upper() --> MAYÚSCULA
+
+Booleans
+True 1
+False 0
+
+None
+Object NonType, usado para representar la ausencia de un valor.
+
+
+"""
+Esto
+Es
+Para escribir
+Multiples líneas
+"""
+
+¿Una línea muy larga? Podemos usar \ para decirle a Python "Hey, esta instrucción va en otra línea"
+
+M a t e m á t i c a
+
++ suma
+- resta
+* multiplicar (flotante)
+** potencia ^
+/ dividir (float)
+// dividir (entero, division truncada)
+% resto de division
+
+Si uno de los números es float, entonces el resultado será otro float.
+División es siempre float. A menos que usemos //
+Redondeo es siempre hacia abajo.
+
+No dividir por cero, no existe.
+
+Jerarquía de operadores en Python
+** enlaza de derecha a izquierda.
+
+Priorities
+1   + -     unario       <---más importante
+2   **
+3   * / %
+4   + -     binario      <---menos importante
+5   < <= > >=
+6   == !=
+Podemos usar (parentesis) para cambiar el orden natural del cálculo. Serán resueltos en primer lugar.
+
+a /= 2 * b equivale a...
+2 * b = 2b
+a = 2b / a
+
+V a r i a b l e s
+
+A-Za-z, digitos y guión bajo (_).
+El nombre debe empezar con una letra, guión bajo es considerado una letra.
+Tanto mayúsculas como minúsculas son tratadas de forma distinta.
+Estos nombres son palabras reservadas y no pueden usarse para crear variables ---> False, None, True, and, as, assert, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lamda, nonlocal, not, or, pass, raise, return, try, while, with, yield.
+
+import ya es usado, pero se puede usar Import en su lugar. No es una buena idea, honestamente.
+
+Variables no necesitan ser creadas de antemano, solo crea una cuando lo necesites.
+
+var = 1
+var, var1, var2 = 1, 2, 3
+print(var)
+
+Eso es, simple y directo.
+
+No se puede usar una variable que no existe.
+
+Usar + para concatenar variables de texto.
+"a" + "b" = "ab"
+var = var + 1
+
+Redefinir una variable.
+var = 0
+var = 1
+
+Si, hay una versión corta de algunas operaciones
++= 	--> a = a + b
+*=  --> a = a * b
+-=	--> a = a - b
+/=	--> a = a / b
+
+round([expresion], [número de decimales]) ---> redondea la expresión.
+
+
+# Esto es
+# un gran
+# comentario.
+
+
+i n p u t ( )
+
+Para que los usuarios ingresen información
+
+granVariable = input()
+
+Ahora, granVariable tendrá el contenido que ingrese el usuario.
+
+input() devuelve un string. Tengamos eso en cuenta.
+Podemos usar float() o int() para convertir el resultado de input() a número. str() para strings.
+
+float(input("Ingrese su salario: "))
+
+
+Usar * con una string, hará que se repita la cantidad de veces que especifiquemos.
+
+D e c i s i o n e s
+
+Básicamente if's
+
+== esto es igual a esto otro
+!= significa lo opuesto ^^^^
+> mayor qué
+>= mayor o igual qué
+< menor qué
+<= menor o igual qué
+
+
+2 == 2. ---> True/Verdadero. Python convierte números
+
+var == 2 * var  --->  var == (2 * var)
+
+Así es un IF
+
+if [expresion]:
+----instrucción
+^
+Espacio o Tab, no los mezcles.
+
+
+if [expresion]:		// si pasa esto
+----instruction		// hacer esto
+else:				// si no
+----instruction		// hacer esto
+
+También hay un elif (else if)
+
+if [expression]:	// si pasa esto
+----instruction		// hacer esto
+elif [expression] 	// si no, si pasa esto otro
+----instruction		// hacer esto
+
+Esto también es válido
+
+if [expression]: instruction
+else: instruction
+
+max() encuentra el número más alto
+max(num1, num2, num3)
+
+min() encuentra el número más bajo
+min(num1,num2,num3)
+
+range() genera números en un array/arreglo/lista
+range(100)      --> 0, 1, 2, 3, 4...100
+range(2, 8)     --> 2, 3, 4, 5, 6, 7
+range(2, 8, 3)  --> 2, 5
+range(1, 1)     --> Nope
+range(2, 1)     --> ^^^^
+
+while   ---> haz esto mientras X condición se cumpla.
+
+while [expression]:
+----instruction
+
+Forzar el cierre del programa: Ctrl + C (solo en consola)
+
+for     ---> para (condición) hacer esto
+pass    ---> no hace nada, devuelve un null
+
+for i in range (100):
+----hacer algo
+----pass
+
+break       --> termina el ciclo
+continue    --> va al siguiente ciclo
+
+Ambos while y for pueden tener la cláusula else. Se ejecuta una vez, no importa si .
+
+L ó g i c a
+
+not <--- prioridad alta
+and
+or  <--- prioridad baja
+
+A       B       A and B
+False   False   False
+False   True    False
+True    False   False
+True    True    True
+
+A       B       A or B
+False   False   False
+False   True    True
+True    False   True
+True    True    True
+
+Argument    not Argument
+False       True
+True        False
+
+i = 1
+j = not not i  <-- Si not not i no es 0, asignar el valor. not i = 0; not not i = 1
+
+O p e r a d o r e s   b i t w i s e
+
+ESTA PARTE ES COMPLICADA  QUIZÁS NO TAN USADA EN EL DÍA A DÍA, PERO ES BUENO SABERLO
+
+SOLO ENTEROS, NADA DE FLOATS
+
+& conjuncion   <--- requiere ambos que sean 1
+| disjuncion   <--- requiere que cualquiera de los dos sea 1
+~ negación     <--- opuesto
+^ intercalar   <--- requiere que solo uno sea 1
+
+A   B   A & B   A | B   A ^ B
+0   0     0       0       0
+0   1     0       1       1
+1   0     0       1       1
+1   1     1       1       0
+
+Argumento   ~Argumento
+0               1
+1               0
+
+---------------------------------------------------------------------------
+i = 15              i:      00000000000000000000000000001111
+j = 22              j:      00000000000000000000000000010110
+log = i and j       log:    True
+bit = i & j         bit:    00000000000000000000000000000110 <--- int 6
+logneg = not i      logneg: False
+bitneg = ~i         bitneg: 11111111111111111111111111110000 <--- -16
+---------------------------------------------------------------------------
+
+Versión corta:
+x &= y
+x |= y
+x ^= y
+
+Cambiando bits
+
+valor << bits <--- mover X bits a la izquierda
+valor >> bits <--- mover X bits a la derecha
+
+Prioritidad    Operador
+1 	        	! ~ ++ -- + - 	unario
+2 	        	** 	
+3 	        	* / % 	
+4 	        	+ - 	        binario
+5 	        	<< >> 	
+6 	        	<<=>> = 	
+7 	        	== != 	
+8 	        	& 	
+9 	        	| 	
+10 	        	&& 	
+11 	        	|| 	
+12 	        	= += -= *= /= %= &= ^= |= >>= <<=
+
+-------------------------
+x = 15          0000 1111
+y = 16          0001 0000
+x & y = 0       0000 0000
+x | y = 31      0001 1111
+~x = 240        1111 0000
+x ^ y = 31      0001 1111
+y >> 1 = 8      0000 1000
+y << 3 = 128    1000 0000
+-------------------------
+
+Alright, tal vez no entiendas estas operaciones, yo no pude al principio, vamos con algo más fácil (creo)
+
+A r r a y s
+
+simpleArray = []
+
+nums = [10, 5, 7, 2, 1]
+
+nums[0] --> 10
+nums[0] = 111   ---> adiós 10, ahora es 111
+
+len()   <--- longitud del array
+
+nums.append(value)              <--- agregar nuevo valor al final de la lista
+nums.inser(position, value)     <--- agregar nuevo valor en la posición indicada
+del nums[1]                     <--- borrar este indice
+
+nums[-1]    <--- obtener el último elemento
+nums[-2]    <--- obtener el penúltimo elemento
+
+--------------------
+for i in superArray:    <--- para cada elemento de superArray (i es el elemento en el que estamos trabajando)
+----print(i)
+--------------------
+
+myArray.sort()      <--- ordenar el array
+myArray.reverse()   <--- invertir el orden
+
+myArray1 = [1]       
+myArray2 = myArray1 // ambos arrays tendrán los mismos valores, incluso si uno cambia
+
+myArray1 = [1, 2, 3, 4, 5]
+myArray2 = myArray1[:]      <--- copiar todos los valores de un array
+myArray2 = myArray1[0:2]    <--- copiar los valores de myArray1, posiciones 0 y 1, 2 es la última posición y no será copiado.
+myArray2 = myArray1[:3]     <--- copia todo desde la posición 0 hasta la posición 2, 3 es excluido.
+myArray2 = myArray1[5:]     <--- lo mismo que [posición inicial:len(myArray1)]
+
+del myArray1[1:3]  <--- borra las posiciones 1 y 2
+del myArray1[:]    <--- borra todo el array
+
+newList = [1, 2, 3, 4]
+5 in newList        = False
+5 not in newList    = True
+
+foo = [i ** 2 for i in bigArray if bigArray[i] != "Hola"]
+
+checkboard = [[EMPTY for i in range(8)] for j in range(8)]  <--- crea un array bi-dimensional. El primer for es para llenar con EMPTY.
+checkboard --> [[EMPTY * 8] * 8]
+
+Python no tiene limite en la profundidad de los arrays.
+Algo como hola[0][1][3] es posible.
+
+F u n c i o n e s
+
+Vienen de Python mismo, de módulos preinstalados y de nuestro código.
+
+No podemos usar una función que no fue definida con anterioridad
+
+No olvidemos agregar la palabra clave 	def
+
+def funcionNombre(argumento):
+----instrucciones
+
+randomVar = superFunction(argument)     <--- el valor de la variable será lo que la función devuelva
+randomVar = foo.metodo(argumento)
+
+El scope (alcance de una variable) se mantiene dentro de la función (se ve más adelante).
+
+Los argumentos pueden ser posicionales o nombrados.
+No uses un parámetro que no existe
+
+def foo(bar, bar2):
+----hacer algo
+foo(bar2="Hey", bar="Aloha")
+
+Pueden combinarse ambos posicionales y nombrados. Los posicionales van primero.
+Si, podemos predefinir valores
+
+def bar(a = 0):		// a va a valer 0, a menos que hagamos algo como bar(3)
+----print(a)
+
+LAS FUNCIONES USAN LA PALABRA CLAVE "return" PARA DEVOLVER ALGO.
+
+def cuadrado(num):
+----return num * num
+
+print(cuadrado(2))	// 4
+
+S c o p e
+
+Variables definidas dentro de una función, no pueden modificarse fuera de esta.
+Variables del interior de una función, no pueden modificarse dentro de una función
+A menos...que usemos la palabra clave 	global
+def foo():
+----global variable
+
+T u p l a s
+
+Pueden ser analizadas sin bucles for.
+Son como una lista, pero sus valores no pueden cambiarse durante la ejecución del script.
+
+hola = "adios",  <--- atención a la coma
+firstTuple = (1, 2, 4, 8)
+sndTuple = (1., .5, .25, .125)
+emptyTuple = ()
+singleElement = (1, )
+La coma debe ser respetada, si no, no será una tupla.
+
+No, no se puede utilizar del, append, insert o [index] para modificar la tupla.
+
+¿Qué puedo hacer con las tuplas?
+len()
++ para concatenar tuplas
+* para multipliccar tuplas
+in/not in para revisar si un valor se encuentra en la tupla
+myTupl.count(2) <--- cuenta los valores duplicados en la tupla
+tuple(DICCIONARIO)   <--- convierte un diccionario en una tupla (explicado más abajo)
+
+D i c c i o n a r i o
+
+Cada key tiene que ser única.
+Los diccionarios no son listas, son conjuntos de pares.
+Solo tienen un sentido.
+dict = {"cat": "gato", "dog": "perro"}
+phoneNumbers = {'boss': 3251135, 'bgates': 123456654, 'moss': 01189998819991197253}
+
+La función keys() muestra las keys del diccionario.
+sorted(dict.keys()) ordena el diccionario por keys
+items() muestra tuplas de keys y values.
+values() es como keys() pero muestra los values en su lugar.
+dict['duck'] = 'swan'
+dict['duck'] = 'no swan'
+dict.update(("duck":"bird"))
+del dict['duck']
+dict.popitem()  	<--- borra el último elemento del diccionario
+dict.get('duck')    <--- devuelve el valor de la key 'duck'
+dict.clear()    <--- vacía el diccionario
+dict.copy() 	<--- copia el diccionario
+dict(TUPLA) 	<--- convierte la tupla en un diccionario
+
+M o d u l o s
+
+Usuario      ---> la persona que usa el módulo.
+Proveedor    ---> la persona que provee el módulo.
+
+Primero, importamos el módulo
+import [nombre del módulo]
+
+Como funciones, no podemos usar lo que aún no fue definido.
+
+Los nombres son muy importantes. Asegurarse de que no tienen conflictos entre si.
+def sin():
+..........
+No tendría conflicto con math.sin()
+
+¿Queremos importar solo unas pocas entidades?
+
+from [modulo] import [lo que queremos]
+
+Podemos usar asterisco (*) para importar todo de un módulo, pero es muy inseguro.
+
+¿No te gusta el nombre de una entidad? Cambialo con as (aliasing)
+from math import sin as SiN, pi as pI
+
+dir([modulo]) muestra las entidades importadas por el módulo.
+
+ceil(x)     <--- int mayor o igual a x
+floor(x)    <--- int menor o igual a x
+trunc(x)    <--- x truncado a int. No es lo mismo que ceil() o floor()
+
+from random import random, seed
+seed() define la semilla de los generadores aleatorios. Si usamos un integer, los números que se generen serán siempre los mismos.
+
+randrange(inicio,fin,incremento)  <--- genera números aleatorios en un rango.
+randint(izquierda,derecha)             <--- elegirá entre izquierda o derecha.
+
+choice(Array[])       <--- elige un elemento aleatorio del array
+sample(Array[], cantidad a elegir)   <--- crea un array basado en cuantos elementos tiene que elegir
+
+El módulo platform nos permite obtener información sobre el sistema donde el programa se ejecuta.
+
+from platform import platform, machine, processor, system, version
+print(platform())
+print(machine())    <--- arquitectura del sistema operativo.
+print(processor())  <--- nombre real del CPU (Procesador, no confundir con gabinete) de ser posible.
+print(system())     <--- sistema actual.
+print(version())    <--- versión del sistema operativo.
+
+¿En qué implementación y versión de Python se esta ejecutando el script?
+
+from platform import python_implementation, python_version_tuple
+print(python_implementation())  <--- "CPython"
+print(python_version_tuple())   <--- tupla con la versión de Python.
+
+Package -> Module -> Function
+
+Cuando usamos un módulo por primera vez, Python crea un nuevo archivo de código pre-compilado, listo para su uso (__pycache__)
+
+
+Variables automáticas:
+__name__    <--- nombre del archivo cuando es un módulo,
+__main__    <--- nombre del archivo cuando se ejecuta solo, no un módulo.
+
+Usar doble guión bajo para decir "Hey, esta variable es privada"
+
+
+Digamos que guardamos nuestros archivos en distintas carpetas...
+Main, Modules, Etc
+¿Cómo accedemos a los módulos si nuestro archivo principal no comparte la carpeta?
+
+Importamos el módulo sys, especificamente la función path.
+import path from sys
+
+Luego, hacemos un append de la ubicación del módulo.
+path.append('..\\modules')
+
+Si tenemos un package, el path será considerado como un módulo
+
+extra
+|
+|---primer_carpeta
+||---uno.py
+||---dos.py
+|----segunda_carpeta
+||---a.py
+||---b.py
+
+Usariamos algo como
+extra.primer_carpeta.uno.funcion()
+
+Los packages requieren inicializarse. Esto debe definirse en un archivo llamado __init__.py
+
+El archivo __init__.py puede estar en cualquier parte de la estructura del directorio.
+
+
+C a r a c t e r e s   y   S t r i n g s
+
+El código ASCII de los carácteres en minúscula es igual al código de los caracteres en mayúsculas + 32.
+
+        I18N
+INTERNATIONALIZATION
+INTERNACIONALIZACIÓN
+I123456789012345678N
+
+Unicode resuelve el problema de I18N
+
+Universal Character Set (UCS-4) usa 32 bits (4 bytes) por cada caracter. Un archivo usando UCS-4 puede empezar con un BOM (Byte Order Mark) para anunciar el contenido del archivo.
+Unicode Transformation Format (UTF-8) usa la cantidad requerida de bits por cada caracter.
+
+Python 3 es compatible con Unicode / UTF-8
+
+'''
+Esto es una multilínea
+Porque tiene tres comillas de cada lado
+'''
+
+"""
+Esta también
+"""
+
+ord('caracter')   <--- muestra el código ASCII/Unicode del caracter.
+chr(int)          <--- convierte un int en un caracter
+
+Si, podemos iterar sobre strings. Si, podemos usar [:] como arrays.
+Si, podemos usar in y not en strings.
+
+Los Strings no pueden mutar.
+Si usamos min(), la letra más baja será la primera en la tabla ASCII.
+Espacio -> 32
+max() hará lo mismo, pero con la letra más alta.
+
+El método index("caracter") devuelve el indice del caracter.
+list(string) creará un array a partir de la string.
+
+Métodos de String
+
+.count(algo) 	<--- cuenta la cantidad de veces que algo aparece.
+
+.capitalize()   <--- si el primer caracter es una letra, será mayúscula y el resto minúscula.
+
+.center(ancho, caracter para rellenar)      <--- centra el string en un ancho especificado.
+"Foo".center(5, "a") ----> "aFooa"
+
+.startswith(arg)	<--- revisa si la string empieza con arg.
+.endswith(arg)		<--- revisa si la string termina con arg.
+
+.find(arg, posición inicial)        <--- es como index(), pero devuelve 1 si existe, -1 si no existe.
+.rfind()        <--- como find() pero empieza desde el final de la string.
+
+.isalnum()      <--- revisa si la string contiene números o letras. A-Z a-z 0-9
+.isalpha()      <--- revisa si la string contiene SOLO letras.
+.isdigit()      <--- revisa si la string contiene SOLO números.
+
+.islower()      <--- es minúscula/lowercase?
+.isupper()      <--- es mayúscula/uppercase?
+.isspace()      <--- es un espacio (ASCII: 32)?
+
+.join(array)    <--- crea un string a partir de un array, el string usado cuando invoques join() será tratado como un separador.
+
+.lower()        <--- todas las letras a minúscula/lowercase.
+.upper()        <--- todas las mayúsculas/uppercase.
+.swapcase()     <--- cambia minúsculas/lowercase con mayúsculas/uppercase y viceversa.
+.title()        <--- la primer letra de cada palabra serán mayúsculas/uppercase.
+
+.lstrip(arg)    <--- Si le ponemos un argumento, quitará todas las coincidencias de la string, desde el lado izquierdo.
+.rstrip(arg)    <--- cómo lstrip(), pero desde la derecha.
+.strip(arg)     <--- combina lstrip() y rstrip()
+
+.replace(original, nuevo, limite de reemplazos)     <--- reemplaza original con nuevo, limite de reemplazos es la cantidad de veces que se hará (opcional).
+
+.split()          <--- crea un array con los caracteres de la String. Los espacios serán considerados separadores.
+
+Comparando Strings:
+Podemos usar los mismos operadores de comparación que usamos con números
+== != <= >= < >
+La String más larga es la más grande.
+Las mayúsculas/uppercase valen menos que las minúsculas/lowercase.
+
+Comparando Strings con números no es una buena idea.
+== y != siempre devolveran False y True. <> devolverá TypeError.
+
+La función sorted() creará una nueva lista ordenada.
+El método .sort() modifcará la lista actual.
+
+Strings formateadas.
+name = "John"
+print(f"Hello, {name}")	// notese la f al principio del argumento.
+
+E x c e p t i o n s
+
+Python automáticamente lanza una excepción cuando se produce un error.
+
+Podemos usar try para ejecutar código y manejar una excepción, en caso de que la haya.
+
+try:
+----instrucciones
+except:
+----en caso de una exception, hacer esto
+
+Podemos agregar más excepts
+
+try:
+----instrucciones
+except except1:		// si la exception corresponde al tipo 1
+----code			// hacer esto
+except except2:		// si la exception corresponde al tipo 2
+----code			// hacer esto otro
+except:				// si no corresponde a los tipos especificados, caerá aquí
+----code
+
+Python 3 viene con 63 exceptions integradas.
+Cuanto más cercana a la raíz, más abstracta será.
+
+            BaseException
+                /|\
+|----------------|--------------|
+SystemExit - Exception - KeyboardInterrupt
+                /|\
+|----------------|--------------|
+LookupError - ValueError - ArithmeticError
+/|\                            /|\
+ |                              |
+IndexError - KeyError       ZeroDivisionError
+
+Por ejemplo
+"except ArithmeticError" incluye "ZeroDivisionError"
+El orden de las exception es importante. La primer coincidencia es donde se ejecutará el código.
+
+Multiples excepciones en un mismo except
+try:
+----bla bla bla
+except (except1, except2):			// especificamos las exception que caerán en este fragmento.
+----código para las dos excepciones
+
+Las Exceptions pueden manejarse dentro o fuera de una función
+
+try: randFun()
+except: bla bla
+
+¿Simular una exception? Usemos raise
+raise ZeroDivisionError
+
+Podemos usar raise sin agregar una exception, pero debe estar dentro de un fragmento except
+
+assert puede utilizarse para evaluar expresiones
+
+assert [expression]
+assert x > 0
+
+Si la expresión es true, devolverá True. Caso contrario, devolverá AssertionError (exception)
+
+Tipos de Exception
+
+ArithmeticError     Todos los errores de aritmética.
+AssertionError      Error cuando la expresión de assert no es True.
+BaseException       La más general y abstracta, todas las otras la incluyen.
+IndexError          El elemento no existe en una secuencia (ej: foo = [1, 2, 3] - foo[4] no existe.
+KeyboardInterrupt   Sucede cuando interrumpimos la ejecución del programa (Ctrl+C).
+LookupError         Exception abstracta que incluye todas las referencias a colecciones inválidas (arrays, diccionarios, tuplas).
+MemoryError         Memoria llena.
+OverflowError       La operación produce un número muy grande, impidiendoq que pueda guardarlo.
+ImportError         Error importando algo.
+KeyError            Como IndexError, pero para diccionarios.
+
+También hay un else para try-except. Se ejecuta si no se producen Exceptions
+try: a a a
+except: b b b
+else: código si no hay ninguna Exception
+
+No olvidemos finally para el final de nuestro try-except
+
+try: c c c
+except: Exception encontrada
+else: si no hay ninguna Exception
+finally: no me importa si hay o no alguna Exception, esto se ejecuta igual.
+
+Las Exception son clases (más información adelante). Por lo tanto, tienen los métodos predefinidos en ellas.
+
+except puede ser seguido de as, así podremos trabajar la exception con otro nombre.
+except Exception as e:	// Exception se llamará "e"
+e.__subclasses__()
+
+La propiedad argumentos es una tupla con los argumentos pasados durante el uso de raise.
+
+raise Exception("Mensaje de mi Exception")
+
+Creando tu propia Exception
+
+class MiError (Exception):
+----def __init__(self, random, msg):
+--------Exception.__init__(msg)
+--------self.random = random
+
+raise MiError("This is random")
+
+
+O b j e t o s
+
+Clases --> coleccion de objetos
+
+Clase Superior     <-- más general
+    \/
+Clase Media
+    \/
+Clase Inferior     <-- más específica
+
+Cada objeto tiene un nombre, propiedades individuales y functiones incluidas (métodos).
+
+class MiClase:
+----código
+
+miPrimerObjeto = MiClase()
+
+class ThisClass:
+----def __init__(self):			// __init__ es el método que se ejecuta cuando instanciamos la clase.
+--------código durante el tiempo de instancia
+
+Es importante que asignemos el parámetro "self" como el primer parámetro de cualquier método de la clase.
+
+class AnotherClass:
+----def __init__(self):
+--------self.newArray = []
+anotherObject = AnotherClass()
+print(anotherObject.newArray)		// devolverá [], ya que newArray esta vacío.
+
+Podemos acceder propiedades y métodos usando la notación.de.punto
+Las propiedades privadas llevan doble guión bajo al principio
+
+Extendiendo clases:
+Cuando extendemos una clase, estamos heredando los métodos y propiedades de la clase superior.
+
+--------------------------------------------------
+class ClaseA:
+----def __init__(self):
+--------self.mensaje = "Hola"
+class ClaseB(ClaseA):
+----def __init__(self):
+--------ClaseA.__init__(self)	// se inicializa la parte de ClaseA
+
+miClaseB = ClaseB()
+print(miClaseB.mensaje)		// nos devolverá "Hola"
+--------------------------------------------------
+
+class ThirdClass(AnotherClass):             <--- ThirdClass extiende AnotherClass
+----def __init__(self):
+--------AnotherClass.__init__(self)			<--- ThirdClass se inicializa como AnotherClass.
+
+
+Podemos redefinir métodos en nuestras clases inferiores.
+Para acceder a los métodos de nuestra clase superior, escribimos ClaseSuperior.método
+
+Algunas propiedades y métodos son predefinidos en los objetos
+
+Objeto.__dict__     <-- nombres y valores de las propiedades del objeto, como un diccionario.
+
+{'_ClaseEjemplo__propiedadPrivada': 2, 'random': 5}
+Ahora podremos acceder a la clase privada como...
+
+Objeto._ClaseEjemplo__propiedadPrivada
+
+Las clases también tienen variables de clases. ¿Cómo?
+Estas no aparecen con el método __dict__, pero pueden ser accedidas fácilmente.
+
+class ClaseEjemplo:
+----variableDeClase = 0
+----def __init__(self):
+--------ClaseEjemplo.varaibleDeClase += 1
+
+Cada vez que se crea una nueva instancia de ClaseEjemplo, variableDeClase se incrementa en 1. Todos los objetos de esta clase compartiran el mismo valor.
+
+Intentar acceder a un atributo que no existe, lanzará una exception.
+Podemos verificar la existencia de un atributo usando la función hasattr()
+
+if hasattr(objeto, 'propiedad'):
+----print(obj.propiedad)
+
+Podemos modificar atributos con setattr(objeto, propiedad, valor)
+
+__name__ es otro método default de la clase.
+Imprime el nombre de la clase.
+
+__module__ devuelve el módulo donde la clase fue definida.
+
+__bases__ devuelve todas las clases superiores de esta clase.
+
+Hasta ahora, si haciamos un print de la instancia de la clase, nos devolvía algo como [Instance of myClass 0xff037288]
+Si definimos el método __str__, cuando hagamos un print de la clase, ejecutará es método.
+
+Cada clase es considerada una subclase de si misma.
+
+issubclass(c1,c2)   <--- True si c1 es una subclase de c2
+
+isinstance(object, class)   <--- True si el objeto es una instancia de la clase.
+
+El operador "is" compara si ambos objetos referencian al mismo objeto.
+
+obj1 = objectFoo(0)
+obj2 = objectFoo(2)
+obj3 = obj1
+
+obj1 is obj2    <-- False
+obj3 is obj1    <-- True
+
+Modificar obj3 modificará obj1 también
+
+La función super() accede a la clase superior sin conocer su nombre.
+
+class RandomClass:					// clase superior
+----def __init__(self):
+--------self.supVar = 11
+class SubRandomClass(RandomClass):	// clase inferior, extiende a RandomClass
+----def __init__(self):
+--------super().__init__()
+--------self.subVar = 12
+
+Si no llamamos a super().__init__(), supVar no existirá dentro de SubRandomClass.
+
+Por supuesto, podemos combinar multiples clases en una.
+
+class AgainRandom(OtroRandom, AlgoMas)
+
+¿Qué pasa si dos clases usan el mismo nombre de variable o función?
+La última definida tendrá prioridad.
+Si ambas superclases estan en el mismo nivel, la primer clase a la izquierda tendrá efectividad.
+
+
+I t e r a d o r e s
+
+Por ejemplo, la función range()
+
+Los iteradores son objetos que contienen ciertas definiciones por un protocolo iterador.
+
+__iter__() devuelve el objeto en si.
+__next__() devuelve el próximo valor.
+
+Los iteradores deben tener un raise StopIteration para detener la iteración.
+Necesitan una variable para llevar cuenta del número de iteración.
+
+La palabra clave "yield" funciona como "return", pero no perderemos el estado de la función.
+Todas las variables serán congeladas hasta la próxima ejecución de la función.
+
+def elevarAlCuadrado(n):
+----foo = 1
+----for i in range(n):
+--------yield val		// devuelve el valor actual
+--------val *= 2
+
+Las listas de comprensión son una forma corta de crear listas y sus contenidos.
+[10 ** ex for ex in range(6)] --> [1, 10, 100, 10000, 100000]
+expresion if condición else segunda expresión
+1 if x % 2 == 0 else 0
+
+L a m b d a
+
+Funcionan como funciones pero sin un nombre.
+
+lambda parametros : expresion
+¿Cómo llamarlo? Lo asignamos a una variable.
+
+soloDos = lamda : 2
+print(justTwo())    <-- 2
+xMultiply = lambda x : x * x
+print(xMultiply(2)) <-- 4
+
+map(funcion, objeto iterable)
+La función map() ejecuta el primer argumento por cada elemento en el segundo elemento (lista, tupla, iterador)
+Lambda puede usarse en map().
+
+filter(funcion, objeto iterable)
+Como map(), pero devuelve True o False, dependiendo el resultado de la función.
+
+Función dentro de otra función (Closures)
+def exterior(arg):
+----gra = arg
+----def interior():
+--------return gra
+----return interior
+
+exterior() devolverá una copia de interior(), asignandolo a una variable hará que terminemos con una función con otro nombre.
+
+La función interna también usará las mismas variables que la función superior. Estas variables mantendrán su valor.
+
+A r c h i v o s 
+
+
+\ se usa en los directores de Windows peeeeero...Python acepta "c:/dir/archivo", convirtiendo las barras/slashes.
+/dir/archivo es más conveniente, ya que podremos usar nuestro script tanto en Windows como otros sistemas *NIX
+
+Python trabaja con los archivos a través de streams. Conectandonos a este stream, abriremos un archivo.
+Se puede imaginar un stream como un río, en el que fluye el agua, pero, en este caso, el contenido del archivo.
+El stream puede fallar (ejemplo: el archivo no existe, número máximo de streams alcazado).
+
+Hay dos operaciones básicas: lectura (read, r) y escritura (write, w).
+Tres modos básicos: lectura (read), escritura (write) y actualizar (update = read & write).
+
+Los streams crean un nuevo objeto y, cuando terminamos de trabajar con ellos, el objeto es eliminado.
+
+Debido al tipo de contenido de los streams, todo se divide en texto y binario.
+
+Los streams de texto son líneas de caracteres.
+
+Los streams binarios no contienen texto, en su lugar contienen una secuencia de bytes. Lectura y escritura estan relacionados a bloques de información con cualquier tamaño.
+
+Sistemas Unix terminan en líneas LF (\n), pero Windows termina con líneas CR y LF (\r\n).
+
+Abriendo un stream
+La función open() es para abrir un stream-->archivo.
+open(archivo, modo, codificación)	<--- ubicación del archivo, modo (read, write, update), codificación (UTF-8 para archivos de texto, por ejemplo).
+Modo y codificación pueden omitirse.
+
+Modos
+r		read			el archivo debe existir
+w		write			el archivo puede ser creado si no existe
+a		append			si el archivo existe, se agrega contenido a este. En caso de no existir, se crea
+r+		read & update	el archivo debe existir y tener permisos de escritura
+w+		write & update	si el archivo existe, se agregará contenido. En caso de no existir, se creará.
+x		crear archivo	Exception si el archivo ya existe.
+
+Podemos cambiar entre texto y binario agregando una t o b con el modo. Texto es el default.
+rt, wt, at, rb, wb, ab
+
+Por defecto, tres streams del script ya estan abiertos. Se pueden usar explicitamente usando el módulo sys.
+
+sys.stdin		input, usado para escribir, la forma principal de ingresar información (input() es un buen ejemplo).
+sys.stdout		salida normal, pre-abierto para escritura, la información será mostrada aquí (print()).
+sys.stderr		es como stdout, pero solo para errores.
+
+La última operación con un stream debe ser close()
+Si close() falla, se devolverá una exception IOError
+
+IOError contiene un atributo llamado errno
+EACCES      permiso denegado
+EBADF       número de archivo incorrecto
+EEXIST      archivo ya existe
+EFBIG       tamañod el archivo es mayor al permitido por el sistema operativo
+EISDIR      archivo es un directorio
+EMFILE      número máximo de streams alcazando
+ENOSPC      dispositivo sin suficiente espacio
+
+Con la función strerror() del módulo "os" podemos ver más información de la exception.
+from os import strerror
+
+try:
+----código
+except IOError:
+----strerror(Exception.errno)
+
+
+Bueno, ya tenemos nuestro stream, ahora leamos el contenido
+
+miStream.read()
+
+miStream.readline()     <--- lee una línea completa, devuelve un string si todo es correcto, si no, un string vacío.
+
+.readlines()    <--- funciona como readline() pero intentará leer todo el contenido del archivo y devolver una lista de strings, una por línea.
+readlines() acepta un int como el número máximo de bytes a leer (todavía devuelve una lista con un string).
+
+El objeto de open() es una instancia de una clase iterable, por lo que podemos usar el método __next__
+
+Escribir con la función write()
+Solo requiere un parámetro para escribirlo en el archivo. NO agrega una nueva línea automáticamente.
+
+sys.stderr.write("Mensaje de Error")	// escribir un mensaje de error.
+
+Bytearray - clase to manejar datos que no son texto.
+Los binarios no pueden guardarse en strings o listas.
+foo = bytearray(100)    <--- objeto bytearray con 10 bytes de almacenamiento.
+
+len() funciona con bytearrays.
+Intentar definir el index de un bytearray con algo que no sea un entero causará un TypeError.
+Un entero fuera del rango 0-255 devolverá ValueError.
+Si la longitud de write() difiere con la información escrita, algo malo pasará durante el proceso de lectura/escritura.
+
+Los archivos binarios pueden leerse con el método readinto()
+Usar .read() para leer un archivo binario puede ser peligroso ya que el contenido puede resultar muy grande para el sistema.
+Podemos evitar errores usando un int para establecer el número máximo de bytes que .read() devuelve.

@@ -1,0 +1,1013 @@
+So...Here we are again, on a new course...
+
+Lista de instrucciones = IL (Instruction List)
+
+Ok, take note about what you considering important :shrug:
+
+Compile = translate to machine code, no need to include the compiler, you already got the binaries.
+
+Interpret = edit the code any time, you need to include the interpreter.
+
+
+Code -> Interpreter -> Execute
+
+Easy to:
+-> Learn
+-> Teach
+-> Use
+-> Understand
+-> obtain, install and deploy
+
+Perl and Ruby are rivals.
+
+Python 3 is more like a new language compared to Python 2.
+
+The Python from PSF (Python Software Foundation) is the official one, known as CPython.
+Other versions:
+- Cython: translates the code to C.
+- Jython: connects better with Java, Python2 compatible.
+- PyPy/RPython: Restricted Python, Python written on a similar Python. Useful to test new features, Python3 compatible.
+
+Your new console.log("")/echo ""/System.out.println("") is now print("")
+
+
+Functions uses ()
+
+functionName(argument)
+
+Some functions have keyword arguments. Those go after the positional parameters. keyword="value"
+
+Only one instruction per line.
+
+Just print() will print an empty line.
+
+Using \slash\ we can escape characters, like \n (new line).
+
+It also accepts multiple arguments, comma separated. Automatically separates the output using spaces.
+Default arguments:
+- end=" " ends with a space, the next print will continue the same line. If the input is "", it'll do the same because it treats the next print as another argument. Apparently, when "end" isn't a new line, any next print will be part of the same line.
+-sep="-" uses hyphens as separators.
+
+Integers? What about 12 345 678?
+Well, write it as 12_345_678 if you don't want to write 12345678
+Add a minus in front for a negative.
+
+Octals & Hexadecimal
+Numbers preceded by 0O / 0o are defined as octals, that means the number must contain digits between 0 to 7.
+Numbers precedeed by 0x / 0X are defined as hexadecimal.
+
+Float numbers
+Only uses DOT, not COMMA.
+0.4 can be written as .4
+
+We can use e/E as exponent
+3E8 -> 3 * 10⁸
+
+Codifying floats
+Planck's constant = 6.62607 * 10⁻³⁴ ----> 6.626007E-34
+
+Python always choose the shortest number representation
+0.0000000000000000000001 ----> 1e-22
+
+Strings
+Alright, we want some good symbols like "quotes" inside of a string.
+Yeah, just \escape\ them or surround the string with 'simple quotes'.
+.upper() --> UPPERCASE
+
+Booleans
+True 1
+False 0
+
+This is 0
+Is this 1?
+
+None
+Object NonType, used to represent absent of value.
+
+Like fenced code, we can use
+"""
+this
+to write
+multiline!
+"""
+
+Do you have a long line? You can use \ to say "Hey, this instrution keeps going on the next line"
+
+M a t h s
+
++ plus
+- minus
+* multiply (float)
+** exponent ^
+/ divide (float)
+// divide (integer, floor division)
+% rest of division
+
+If one of the numbers is float, then the result will be a float.
+Division result is always float. UNLEEEEESSSS we use //
+Round always goes down.
+
+Never divide by zero because it doesn't exists.
+
+Hierarchy of operands is determined by Python
+** links from right to left.
+
+Priorities
+1   + -     unary       <---most important
+2   **
+3   * / %
+4   + -     binary      <---less important
+5   < <= > >=
+6   == !=
+You can use (parentheses) to change the natural order of the calculation. These are calculated first.
+
+a /= 2 * b translates as...
+2 * b = 2b
+a = 2b / a
+
+V a r i a b l e s
+
+A-Za-z, digits and underscore (_).
+The name must begin with a letter, underscore is considered a letter.
+Both upper- and lower- case are treated differently.
+The name can't be a reserved keyword ---> False, None, True, and, as, assert, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lamda, nonlocal, not, or, pass, raise, return, try, while, with, yield.
+
+import is already taken but you can use Import instead. Not a good practice tho.
+
+Variables doesn't need to be declared beforehand, just create one when you need it.
+
+var = 1
+var, var1, var2 = 1, 2, 3
+print(var)
+
+That's it, quite simple and straightforward.
+
+You can't use a var that doesn't exist.
+Use + to concatenate vars to strings.
+"a" + "b" = "ab"
+var = var + 1
+Redefine the variable.
+
+Yes, you can use short versions of this stuff
++= *= -= /=
+
+round([expression], [number of decimals]) ---> rounds the expression.
+
+
+# This is
+# a great
+# comment...
+# dude.
+
+
+i n p u t ( )
+
+I'm sure you want users to input their data. Yeah, it's amazing...
+
+greatVar = input()
+
+Now greatVar will take the input from the user.
+
+input() result is a string. Keep this in mind.
+We can use float() or int() to convert string to number. str() for strings.
+
+float(input("Enter your salary, you damn poor: "))
+
+
+Use * with a string and it will repeat it's content.
+
+D e c i s i o n s
+
+Yeah, if and stuff...
+
+== means this equals to this-other-thing
+!= means the opposite ^^^^
+> greater than
+>= greater or equal
+< lesser than
+<= lesser or equal
+
+
+2 == 2. ---> True, yes, hard to believe but Python converts numbers
+
+var == 2 * var  --->  var == (2 * var)
+
+Yeees, here's the if
+
+if [expression]:
+----instruction
+^
+Space OR Tab, don't mix them.
+
+
+if [expression]:
+----instruction
+else:
+----instruction
+
+There's also elif
+
+if [expression]:
+----instruction
+elif [expression]
+----instruction
+
+This is valid too:
+
+if [expression]: instruction
+else: instruction
+
+max() finds the highest number
+max(num1, num2, num3)
+
+min() find the lowest number
+min(num1,num2,num3)
+
+range() generates numbers on a range
+range(100)      --> 0, 1, 2, 3, 4...100
+range(2, 8)     --> 2, 3, 4, 5, 6, 7
+range(2, 8, 3)  --> 2, 5
+range(1, 1)     --> Nope
+range(2, 1)     --> ^^^^
+
+while   ---> do this while we have something to do.
+
+while [expression]:
+----instruction
+
+Stuck on a loop? Ctrl + C
+
+for     ---> this time we decide the amount of times
+pass    --->doesn't do anything
+
+for i in range (100):
+----do something
+----pass
+
+break       --> the cycle ends
+continue    --> alright, let's go to another cycle, we're done here/exits while
+
+Both while and for can use the else branch. It executes once, doesn't matter if the conditions aren't met.
+
+C o m p u t e r   l o g i c
+
+not <--- unary priority
+and
+or  <--- lowest priority
+
+A       B       A and B
+False   False   False
+False   True    False
+True    False   False
+True    True    True
+
+A       B       A or B
+False   False   False
+False   True    True
+True    False   True
+True    True    True
+
+Argument    not Argument
+False       True
+True        False
+
+i = 1
+j = not not i  <-- If not not i isn't 0, assign the value. not i = 0; not not i = 1
+
+B i t w i s e   o p e r a t o r s
+
+ONLY INTEGERS, FORGET ABOUT FLOATS
+
+& conjuntion    <--- requires both to be 1
+| disjuntion    <--- requires any of both to be 1
+~ negation      <--- opposite
+^ intercalate   <--- requires only one to be 1
+
+A   B   A & B   A | B   A ^ B
+0   0     0       0       0
+0   1     0       1       1
+1   0     0       1       1
+1   1     1       1       0
+
+Argument    ~Argument
+0               1
+1               0
+
+---------------------------------------------------------------------------
+i = 15              i:      00000000000000000000000000001111
+j = 22              j:      00000000000000000000000000010110
+log = i and j       log:    True
+bit = i & j         bit:    00000000000000000000000000000110 <--- integer 6
+logneg = not i      logneg: False
+bitneg = ~i         bitneg: 11111111111111111111111111110000 <--- -16
+---------------------------------------------------------------------------
+
+Short version:
+x &= y
+x |= y
+x ^= y
+
+Shifting bits
+
+value << bits <--- move [bits] bits to the left
+value >> bits <--- move [bits] bits to the right
+
+Priority    Operand
+1 	        ! ~ ++ -- + - 	unary
+2 	        ** 	
+3 	        * / % 	
+4 	        + - 	        binary
+5 	        << >> 	
+6 	        <<=>> = 	
+7 	        == != 	
+8 	        & 	
+9 	        | 	
+10 	        && 	
+11 	        || 	
+12 	        = += -= *= /= %= &= ^= |= >>= <<=
+
+-------------------------
+x = 15          0000 1111
+y = 16          0001 0000
+x & y = 0       0000 0000
+x | y = 31      0001 1111
+~x = 240        1111 0000
+x ^ y = 31      0001 1111
+y >> 1 = 8      0000 1000
+y << 3 = 128    1000 0000
+-------------------------
+
+Alright, maybe you can't understand the bitwise operations, let's go back to something easier (I think)
+
+A r r a y s
+
+simpleArray = []
+
+nums = [10, 5, 7, 2, 1]
+
+nums[0] --> 10
+nums[0] = 111   ---> bye bye 10, now you're a 111
+
+len()   <--- length of the array
+
+nums.append(value)              <--- appends a new value at the end of the list
+nums.inser(position, value)     <--- appends a new value to the specified position
+del nums[1]                     <--- delete this index
+
+nums[-1]    <--- gets the last item
+nums[-2]    <--- gets the previous item from the last one
+
+--------------------
+for i in superArray:    <--- just like a forEach
+----print(i)
+--------------------
+
+myArray.sort()      <--- sorts the array
+myArray.reverse()   <--- reverts the position of the values
+
+myArray1 = [1]       // Just like inodes on a Linux system
+myArray2 = myArray1 // both reference to the same location.
+
+myArray1 = [1, 2, 3, 4, 5]
+myArray2 = myArray1[:]      <--- copy everything from the array
+myArray2 = myArray1[0:2]    <--- copy the values from myArray1, position 0 and 1, 2 is the last position and won't be included.
+myArray2 = myArray1[:3]     <--- everything from position 0 to the specified one.
+myArray2 = myArray1[5:]     <--- same as [start:len(myArray1)]
+
+del myArray1[1:3]  <--- deletes positions 1 and 2
+del myArray1[:]    <--- deletes the whole array
+
+newList = [1, 2, 3, 4]
+5 in newList        = False
+5 not in newList    = True
+
+foo = [i ** 2 for i in bigArray if bigArray[i] != "hello"]
+
+checkboard = [[EMPTY for i in range(8)] for j in range(8)]  <--- creates a bidimensional array. The first for fills a row with EMPTY.
+checkboard --> [[EMPTY * 8] * 8]
+
+Python doesn't limit how deep arrays can be.
+Something like hello[0][1][3] is possible.
+
+F u n c t i o n s
+
+They come from Python itself, from preinstalled modules and from our code.
+
+You can't use a function before the definition of it.
+
+Don't forget the def
+
+def funcName(arg):
+----instruction
+
+randomVar = superFunction(argument)     <--- the value will be whatever returns from superFunction
+randomVar = foo.method(arg)
+
+The scope of the vars is kept inside of the function.
+
+Arguments can be positional or named.
+Don't use a parameter that doesn't exist.
+
+def foo(bar, bar2):
+----do something
+foo(bar2="Hey", bar="Aloha")
+
+You can combine both arguments but make sure that you put first the positional and then the named.
+Yes, we can predefine values
+
+def bar(a = 0):
+----print(a)
+
+Use return to return a result from the function.
+
+S c o p e
+
+Variables defined inside of a function can't be used outside.
+Variables from the outside, can't be modified inside of the function.
+Unlesssssss...we use the keyword global
+def foo():
+----global variable
+
+T u p l e s
+
+They can be scanned with for loops.
+Like list but they can't be changed during execution.
+
+hello = "bye",  <--- watch the comma
+firstTuple = (1, 2, 4, 8)
+sndTuple = (1., .5, .25, .125)
+emptyTuple = ()
+singleElement = (1, )
+You must respect the comma, otherwise it won't be a tuple.
+
+No, you can't use del, append, insert or [index] to modify the tuple.
+
+Well, what can I do with the tuple?
+len()
++ to concatenate tuples
+* to multiply tuples
+in/not in to check for values
+myTupl.count(2) <--- counts duplicated "2"
+tuple(DICTIONARY)   <--- converts dictionary into a tuple
+
+D i c t i o n a r y
+
+Remember objects from JavaScript? {key: value}, well, something like that.
+Every key must be unique.
+Dictionaries aren't lists, it stores pairs of values.
+They're just one-way.
+dict = {"cat": "gato", "dog": "perro"}
+phoneNumbers = {'boss': 3251135, 'bgates': 123456654, 'moss': 01189998819991197253}
+
+The keys() function shows the keys of the dictionary.
+sorted(dict.keys()) will sort the keys
+items() will output tuples of keys and their values.
+values() works like keys() but with the values instead.
+dict['duck'] = 'swan'
+dict['duck'] = 'no swan'
+dict.update(("duck":"bird"))
+del dict['duck']
+dict.popitem()  <--- deletes the last element of the list.
+dict.get('duck')    <--- gets the value of the key 'duck'
+dict.clear()    <--- clears the dictionary
+dict.copy() <--- copies the dictionary
+dict(TUPLE) <--- converts tuple into a dictionary
+
+M o d u l e s
+
+User        -> the person that uses the module.
+Supplier    -> the person who provides the module.
+
+First you must import the module
+import [module name]
+
+Like functions, you can't use what hasn't been defined yet.
+
+Namespaces are very important. Make sure they don't conflict with each other.
+def sin():
+..........
+Won't conflict with math.sin()
+
+Import only a few entities?
+
+from [module] import [whatever you want]
+
+We can also use asterik (*) to import everything from a module, but it's too much and insecure.
+
+Don't like the name of the entity? Change it with as (aliasing)
+from math import sin as SiN, pi as pI
+
+dir([module]) shows all the entities imported by that module.
+
+ceil(x)     <--- int bigger or equals to x
+floor(x)    <--- int lesser or equals to x
+trunc(x)    <--- x truncated to int. Not the same as ceil() or floor()
+
+from random import random, seed
+seed() sets the seed for the random generators. If you use an integer as argument, the numbers generated will be always the same.
+
+randrange(start,end,increment)  <--- generates random numbers in a range.
+randint(left,right)             <--- chooses either left or right.
+
+choice(Array[])         <--- chooses a random element from the array
+sample(Array[], pick)   <--- creates an array based on how many items it has to choose
+
+The module platform allow us to get information about the platform where the program is running.
+
+from platform import platform, machine, processor, system, version
+print(platform())
+print(machine())    <--- prints the architecture of the OS.
+print(processor())  <--- real name of the CPU if possible.
+print(system())     <--- current system.
+print(version())    <--- OS version.
+
+Wanna know which implementation and version of Python are you running?
+from platform import python_implementation, python_version_tuple
+print(python_implementation())  <--- "CPython"
+print(python_version_tuple())   <--- tuple with Python version
+
+Package -> Module -> Function
+
+When we use a module for the first time, Python creates a new file with half-compiled code, ready for Python to use. (__pycache__)
+
+Some automatic variables:
+__name__    <--- name of the file when it's a module
+__main__    <--- name of the file when run straight, not a module
+
+Use double underscore to say "Hey, this variable is private"
+
+Let say you save your python files on different folders...
+Main, Modules, Etc
+How do you access the modules if the main file isn't sharing the folder?
+
+We import the sys module, specifically the path function.
+Then, we append the location of the module
+path.append('..\\modules')  <--- escape the slash, it's for Windows.
+
+If you have a package, the path will be considered as the module
+You have
+
+extra
+|
+|---first
+||---one.py
+||---two.py
+|----second
+||---a.py
+||---b.py
+
+You'll use something like
+extra.first.one.fun()
+
+Packages can require initialization, it must be defined at a file called __init__.py
+
+The __init.py__ file can be anywhere in the folder structure.
+
+E x c e p t i o n s
+
+Python automatically throws an exception when there's an error.
+
+We can use try to run the code an except to handle exceptions.
+
+try:
+----code here
+except:
+----in case of exception do this
+
+We can even add more excepts
+
+try:
+----code here
+except except1:
+----this
+except except2:
+----that etc
+except:
+----this one is the default except
+
+Python 3 comes with 63 integrated exceptions.
+The closer to the root, the more abstract it becomes.
+
+            BaseException
+                /|\
+|----------------|--------------|
+SystemExit - Exception - KeyboardInterrupt
+                /|\
+|----------------|--------------|
+LookupError - ValueError - ArithmeticError
+/|\                            /|\
+ |                              |
+IndexError - KeyError       ZeroDivisionError
+
+For example
+except ArithmeticError includes ZeroDivisionError
+The order of exceptions really matters. The first coincidence 
+Handle multiple exceptions?
+try:
+----bla bla bla
+except (except1, except2):
+----here comes the code for both exceptions
+
+Exceptions can be handled inside or outside of functions.
+try: randFun()
+except: bla bla
+
+Simulate exceptions? Use raise
+raise ZeroDivisionError
+
+You can use raise alone but it must be inside of a except fragment.
+
+assert can be used to eval expressions.
+
+assert [expression]
+assert x > 0
+
+If the expression is true, it'll return True. Otherwise, returns an AssertionError
+
+ArithmeticError     All the arithmetic errors
+AssertionError      Error when the expression of assert isn't True
+BaseException       The more general and abstract, all the others are included
+IndexError          Non existing element from a sequence
+KeyboardInterrupt   It happens when the user interrupts the program with a keyboard shortcut (Ctrl+C)
+LookupError         Abstract exception that includes all the references to non-valid collections (arrays, dictionaries, tuples)
+MemoryError         Ran out of memory
+OverflowError       Operation produces a number too big for storage
+ImportError         Error importing something
+KeyError            Like IndexError but for dictionaries
+
+There's also else for the try-except block.
+try: a a a
+except: b b b
+else: do this when there's no exceptions thrown
+
+And don't forget finally at the end of the block.
+
+try: c c c
+except: Exception found
+else: ok
+finally: I don't care if there's an exception or not, I'll be executed.
+
+Exceptions are classes, so they have the default methods within them.
+
+except can be followed by as, so you can work with your exception with another name.
+except Exception as e:
+e.__subclasses__()
+
+The args property is a tuple with the arguments passed during the raise statement.
+raise Exception("hello")
+
+Create your own Exception
+class RandError (Exception):
+----def __init__(self, random, msg):
+--------Exception.__init__(msg)
+--------self.random = random
+
+raise RandError("This is random")
+
+C h a r a c t e r s   a n d    S t r i n g s
+
+Lowercase characters code is uppercase code + 32
+
+        I18N
+INTERNATIONALIZATION
+
+Unicode solves the problem of I18N
+
+Universal Character Set (UCS-4) uses 32 bits (4 bytes) for each character. A file using UCS-4 can begin with a BOM (Byte Order Mark) to announce the content of the file.
+Unicode Transformation Format (UTF-8) uses the required amount of bits for each character.
+
+Python 3 is compatible with Unicode / UTF-8
+'''
+This is a multiline
+'''
+"""
+And this one too
+"""
+
+ord('character')   <--- shows the ASCII/Unicode code of the character.
+chr(int)           <--- converts integer into a character
+
+Yes, we can iterate strings. Yes, we can use the [:] notation.
+Yes, we can use in and not in with strings.
+
+Strings can't be mutate.
+
+If we use min(), the lowest letter is the first at the ASCII table.
+Space -> 32
+max() will do the same but with the maximum letter.
+
+The index() method returns the index of a character
+
+list() will create an array from the string.
+
+String methods
+
+.count(something) <--- counts the number of times something appears.
+
+.capitalize()     <--- if the first character is a letter, it'll be uppercased and the rest of the string will be lowercase.
+
+.center(width, optional character)      <--- centers the string within the specified width.
+
+.startswith()
+.endswith(arg)    <--- checks if the string ends with the specified argument.
+
+.find(arg, starting position)        <--- like index but only returns 1 or -1 if it doesn't exists.
+.rfind()        <--- like find() but starts from the back of the string.
+
+.isalnum()      <--- checks if the string contains only digits or alphabetic characters. A-Z a-z 0-9
+.isalpha()      <--- checks if the string has only letters.
+.isdigit()      <--- checks if the string contains only digits.
+
+.islower()      <--- is lowercase?
+.isupper()      <--- is uppercase?
+.isspace()      <--- is this a space (32)?
+
+.join(array)    <--- creates a new string using the elements from the array, the string used when you invoke join() will be treated as separator.
+
+.lower()        <--- all alpha to lowercase.
+.upper()        <--- all alpha to uppercase.
+.swapcase()     <--- swaps lowercase with uppercase and viceverse.
+.title()        <--- the first letter of each word will be uppercase.
+
+.lstrip(arg)    <--- works like a trim() for whitespace. If we set an argument, it'll strip the argument from the left side.
+.rstrip(arg)    <--- like lstrip() but from the right side.
+.strip(arg)     <--- combines lstrip() and rstrip()
+
+.replace(from, to, replacement limit)     <--- replaces the from with to.
+
+.split()          <--- creates a new array with the words from the string, thinking that whitespace is the separator.
+
+Comparing Strings:
+
+We can use the same comparison operators from numbers. == != <= >= < >
+The longest string is the bigger one.
+Uppercase characters are smaller than lowercase.
+
+Comparing strings with numbers isn't a good idea.
+== and != will always return False and True. <> will return TypeError.
+
+The sorted() function will create a new list with the sorted.
+.sort() will modify the existing list.
+
+Remember the string literals from JavaScript?
+The F strings are like that.
+name = "John"
+print(f"Hello, {name}")
+
+O b j e c t s
+
+Classes --> collection of objects
+
+Upper class     <-- more general
+    \/
+Middle class
+    \/
+Lower class     <-- more specific
+
+Each object has a name, individual properties and built-in functions
+
+class MyClass:
+----do do do do
+
+myFirstObject = MyClass()
+
+class ThisClass:
+----def __init__(self):
+--------something at instance time
+
+Sooooo...Apparently, self for Python is like this for JavaScript.
+It's very important that you set "self" as the first parameter of any methods of the class.
+
+class AnotherClass:
+----def __init__(self):
+--------self.newArray = []
+anotherObject = new AnotherClass()
+print(anotherObject.newArray)
+
+Yes, we can access properties and methods with the.dot.notation
+
+What if I want to hide my property? Just add __double_underscore to make it private.
+
+It's very important to always include self with the parameters of the method.
+
+class ThirdClass(AnotherClass):             <--- ThirdClass extends AnotherClass
+----def __init__(self):
+--------AnotherClass.__init__(self)
+
+We can redefine methods in our lower class
+In order to access the methods from the super class, use SuperClassName.method
+
+There are some default properties and methods for objects.
+
+Object.__dict__     <-- names and values of properties of the object.
+
+{'_ExampleClass__privateProperty': 2, 'random': 5}
+Now we can access the private property like...
+
+Object._ExampleClass__privateProperty
+
+Hey, we can use class variables. What?
+These aren't printed with __dict__ but can be easily accesed.
+
+class ExampleClass:
+----classVar = 0
+----def __init__(self):
+--------ExampleClass.classVar += 1
+
+Each time we create a new instance of ExampleClass, the classVar variable will be increased in 1. All the objects from this class will share the same value.
+
+Trying to access a non-existing attribute will throw an exception.
+We can check if an attribute exists using hasattr()
+
+if hasattr(obj, 'property):
+----print(obj.property)
+
+Modify attributes with setattr(obj, property, value)
+
+__name__ is another default method of classes.
+It just prints the name of the class.
+
+__module__ returns the module where the class is defined.
+
+__bases__ returns superclasses of the class.
+
+If we define the __str__ method, when you print an instance of the class, it'll execute that method.
+
+Each class is considered a subclass of itself.
+
+issubclass(c1,c2)   <--- returns True if c1 is a subclass of c2
+
+isinstance(object, class)   <--- returns True if the object is an instace of the class.
+
+The is operator compares if both objects reference to the same object.
+
+obj1 = objectFoo(0)
+obj2 = objectFoo(2)
+obj3 = obj1
+
+obj1 is obj2    <-- False
+obj3 is obj1    <-- True
+
+Modify obj3 and you'll be modifying obj1 as well
+
+The super() function access the superclass without knowing it's name.
+
+class RandomClass:
+----def __init__(self):
+--------self.supVar = 11
+class SubRandomClass(RandomClass):
+----def __init__(self):
+--------super().__init__()
+--------self.subVar = 12
+
+If we don't call super().__init__(), supVar won't be exists on SubRandomClass.
+
+Of course, we can combine multiple classes in one.
+
+class AgainRandom(PreviousRandom, SomethingElse)
+
+What if two classes use the same name for a variable or function?
+Well, the latest definition is the one used here.
+If both superclasses are at the same level, the first class at the left will be effective.
+
+G e n e r a t o r s
+
+For example, range()
+
+It's an object and contains certain definitions from the iterator protocol.
+
+__iter__() returns the object itself.
+__next__() returns the next value
+
+Iterators must have a raise StopIteration to stop iterating.
+They need a variable tracking the iteration number.
+
+The keyword yield works like return but won't lose the status of the function.
+All the variables will be frozen until the next execution of the function.
+
+def elevateTwo(n):
+----foo = 1
+----for i in range(n):
+--------yield val
+--------val *= 2
+
+Comprehension lists are a short way to create lists and their contents.
+[10 ** ex for ex in range(6)] --> [1, 10, 100, 10000, 100000]
+expression if condition else second_expression
+1 if x % 2 == 0 else 0
+
+L a m b d a
+
+Works like a function but without a name. Anonymous functions (like ()=> in JavaScript)
+
+lambda parameters : expression
+Wanna call it? Assign it to a variable.
+
+justTwo = lamda : 2
+print(justTwo())    <-- 2
+xMultiply = lambda x : x * x
+print(xMultiply(2)) <-- 4
+
+map(function, iterable-object)
+The map() function executes the first argument (function) for each element in the second argument (list, tuple, generator)
+Lambdas can be used here
+
+filter(function, iterable-object)
+Just like map but returns True or False, depends on the result of the function.
+
+Closures. Yeah, it might be kinda hard to understand, so let's go easy...
+def exterior(arg):
+----gra = arg
+----def interior():
+--------return gra
+----return interior
+
+exterior() returns a copy of interior(), assign it to a variable and you'll end up with another name for the same function.
+
+The closure also uses the same variables from it's parent function. Those variables will keep their value for the closure.
+
+F i l e s 
+
+Sooo...
+\ is used in Windows for directories buuuuut...Python accepts "c:/dir/file", converting the slashs.
+
+Python works with files through a stream. Connect to this stream and you'll be opening the file.
+The stream can fail (example: file doesn't exists, maximum number of streams has been reached)
+
+There are two basic operations: read and write.
+Three basic modes: read, write and update (read & write)
+
+The stream creates a new object, when you're done with it, the object is killed.
+
+Due to the type of content on the streams, everything is divided in text and binary.
+
+Text-streams are lines with characters.
+
+Binary-streams doesn't contain text, instead they have a sequence of bytes. Read and writes are related to blocks of data of with any size.
+
+Unix systems end lines with LF (\n) but Windows ends the lines with CR and LF (\r\n)
+
+Opening a stream
+Use the open() function to open a stream->file
+open(file, mode, encoding)      <-- location of the file, mode (read, write), encoding (example: UTF-8 for text files).
+Mode and encoding can be skipped.
+
+Modes
+r       read                file must exist
+w       write               file can be created if it doesn't exist
+a       append              create file if doesn't exist, append content if it does
+r+      read and update     file must exist and have the write permission
+w+      write and update    create file if it doesn't exist, previous content will be kept
+x       create file         exception if the file already exists
+
+Switch between text and binary mode adding a t or b with the mode. Text mode is the default.
+rt, wt,at, rb, wb, ab
+
+By default, the three streams of your script are already open. You can use them explicitly importing the sys module.
+sys.stdin       input, used for writing and main data entry (input() is a good example)
+sys.stdout      normal exit, pre-open for writing, data will be shown here (print())
+sys.stderr      like stdout but only for errors
+
+The last operation with a stream must be close().
+The close() execution might fail, returning an exception IOError.
+
+The IOError contains an attribute called errno
+EACCES      permission denied
+EBADF       number of file incorrect
+EEXIST      file already exists
+EFBIG       file size > OS maximum allowed
+EISDIR      file is a directory
+EMFILE      maximum number of streams already open
+ENOSPC      device without enough space
+
+What if I want to report those exceptions? Do I have to write a bunch of IFs?
+Nah, just import the strerror() function from the module os
+It only requires an int value of the error. strerror(exception.errno)
+
+Ok, you have your variable myStream, now let's read it's content.
+
+myStream.read()
+
+myStream.readline()     <--- reads a complete line, return string if everything is correct, else an empty string
+
+.readlines()    <--- works like readline() but it'll try to read the whole content of the file and return a list of strings, one per line.
+readlines() all accepts an int value as the max number of bytes to read (still returns a list with a string).
+
+The open() object is an instance of a iterable class, so you can use the __next__ method.
+
+Write with the write() function. It requires just one parameter to write it into the file. It doesn't add a new line automatically.
+
+Write a message to stderr using sys.stderr.write("Error message")
+
+Bytearray - class to handle files that aren't text.
+Binaries can't be stored using strings or lists.
+foo = bytearray(100)    <--- object bytearray with 10 bytes of storage.
+
+len() works with bytearrays.
+Don't try to set an index value of the bytearray with something else than an integer or you'll end up with a TypeError.
+An integer out of 0-255 will return ValueError
+If the length of write() differs with the data written, then something bad happened during the R/W process.
+
+Read binary files with readinto() method.
+Using .read() with a binary file could be dangerous because the content might be too big for the system.
+Prevent errors using an integer to establish the maximum number of bytes that .read() returns.
